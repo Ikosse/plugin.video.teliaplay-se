@@ -1068,23 +1068,22 @@ class MenuList():
             except Exception:
                 rating = ""
 
+            timestamp_now = tz_sthlm_stamps.now("ms")
+
+            start_timestamp = program["startTime"]["timestamp"]
+            end_timestamp = program["endTime"]["timestamp"]
+            is_live = start_timestamp <= timestamp_now <= end_timestamp
+            duration = (end_timestamp - start_timestamp) // 1000
+
             start_time = tz_sthlm_stamps.local_datetime_str(
-                program["startTime"]["timestamp"], "ms", "%X"
+                start_timestamp, "ms", "%X"
             )
             start_time = tz_sthlm_stamps.strip_seconds(start_time)
 
             end_time = tz_sthlm_stamps.local_datetime_str(
-                program["endTime"]["timestamp"], "ms", "%X"
+                end_timestamp, "ms", "%X"
             )
             end_time = tz_sthlm_stamps.strip_seconds(end_time)
-
-            duration = (program["endTime"]["timestamp"]
-                        - program["startTime"]["timestamp"]) // 1000
-
-            timestamp_now = tz_sthlm_stamps.now("ms")
-            start_time = program["startTime"]["timestamp"]
-            end_time = program["endTime"]["timestamp"]
-            is_live = start_time <= timestamp_now <= end_time
 
             title = program["media"]["title"]
             label = "[COLOR yellow]{2}[/COLOR] [COLOR {0}]{1}[/COLOR]".format(
