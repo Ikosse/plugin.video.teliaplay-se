@@ -2,10 +2,10 @@
 Kodi add-on for watching content provided by https://www.teliaplay.se. It requires a Telia Play SE account.
 
 * Features
-	* Stream content from Telia Play SE
+	* Stream content provided by Telia Play SE
 	* Purchase movies and series through the Telia Play store
 	* Switch between multiple users
-	* Adding/removing items to/from My List
+	* Add or remove items in Min Lista
 	* Search history
 
 ## Usage
@@ -25,7 +25,7 @@ To get started, enter your Telia Play SE credentials into one of the account fie
 This add-on is unofficial and its author has no affiliation with https://www.teliaplay.se.
 
 ## Additional notes
-The add-on only supports Telia Play SE
+The add-on only supports Telia Play SE.
 
 ## Contact
 email: andrelofgren@hotmail.co.uk
