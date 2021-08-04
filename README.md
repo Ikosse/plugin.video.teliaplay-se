@@ -3,6 +3,7 @@ Kodi add-on for watching content provided by https://www.teliaplay.se. It requir
 
 * Features
 	* Stream content provided by Telia Play SE
+	* Watch trailers
 	* Purchase movies and series through the Telia Play store
 	* Switch between multiple users
 	* Add or remove items in Min Lista
