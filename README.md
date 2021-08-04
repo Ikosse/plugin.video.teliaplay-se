@@ -28,4 +28,4 @@ This add-on is unofficial and its author has no affiliation with https://www.tel
 The add-on only supports Telia Play SE.
 
 ## Contact
-email: andrelofgren@hotmail.co.uk
+email: andrelofgren@hotmail.co.uk.
