@@ -1,8 +1,8 @@
-import requests
 import urllib.parse
+import requests
 
 
-class WebException():
+class WebException(Exception):
     pass
 
 

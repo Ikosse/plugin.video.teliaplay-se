@@ -1,10 +1,10 @@
 import os
 import sys
 import json
+import urllib.parse
 import xbmc
 import xbmcaddon
 import xbmcvfs
-import urllib.parse
 
 
 class AddonUtils():

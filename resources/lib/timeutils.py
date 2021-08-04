@@ -1,6 +1,6 @@
 import functools
-import pytz
 from datetime import datetime, timedelta
+import pytz
 
 
 class TimestampsException(Exception):

@@ -12,8 +12,8 @@
   </extension>
   <extension point="xbmc.addon.metadata">
     <platform>all</platform>
-    <summary lang="en_GB"></summary>
-    <description lang="en_GB"></description>
+    <summary lang="en_GB">Watch content provided by Telia Play SE.</summary>
+	<description lang="en_GB">This add-on gives you access to wide variety of content provided by Telia Play SE (Sweden), including movies, series, play services and live TV. An account on https://teliaplay.se is required for the add-on to work.</description>
 	<disclaimer lang="en_GB">This add-on is unofficial and is not supported nor endorsed by https://teliaplay.se.</disclaimer> 
 	<license>GPL-2.0-or-later</license>
     <email>andrelofgren@hotmail.co.uk</email>

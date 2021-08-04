@@ -28,6 +28,7 @@ class TeliaPlay():
     def __init__(self, userdata):
         self.tv_client_boot_id = userdata["bootUUID"]
         self.device_id = userdata["deviceUUID"]
+        self.session_id = str(uuid.uuid4())
         try:
             self.token_data = userdata["tokenData"]
         except KeyError:
@@ -534,8 +535,7 @@ class TeliaPlay():
         for vod in vods:
             if vod["type"] == "TVOD" and vod["deviceType"] == "WEB":
                 return vod
-        else:
-            return None
+        return None
 
     def rent_video(self, vod_id, pin_code):
         request = {
@@ -627,7 +627,6 @@ class TeliaPlay():
         return response_json
 
     def get_stream(self, stream_id, stream_type):
-        self.session_id = str(uuid.uuid4())
         request = {
             "POST": {
                 "scheme": "https",
@@ -671,6 +670,7 @@ class TeliaPlay():
             request, headers=headers, payload=payload
         ).json()
         error_check(response_json)
+
         if stream_type == "live":
             return response_json["streams"][1]
         else:

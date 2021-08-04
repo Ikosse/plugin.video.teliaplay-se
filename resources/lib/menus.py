@@ -1,11 +1,10 @@
 import os
 import functools
 import datetime
+import uuid
+import urllib.parse
 import dateutil.parser
 import pytz
-import uuid
-import json
-import urllib.parse
 import inputstreamhelper
 import xbmc
 from xbmcgui import ListItem, Dialog
@@ -27,7 +26,8 @@ def logging(method):
         if debug:
             args_repr = [repr(arg) for arg in args]
             kwargs_repr = [
-                "{0}={1!r}".format(key, val) for (key, val) in kwargs.items()
+                "{0}={1!r}".format(key, val)
+                for (key, val) in list(kwargs.items())
             ]
             arguments = ", ".join(args_repr + kwargs_repr)
             addon.log("Calling {0}({1})".format(method.__name__, arguments))
@@ -75,7 +75,7 @@ class MenuList():
 
     def _add_folder_item(
         self, items, label, url, icon=None, fanart=None, sort_title="",
-        genre="", info="", datetime="", duration=0, is_folder=True,
+        genre="", info="", datetime_str="", duration=0, is_folder=True,
         is_playable=False, context_menu_items=None, offscreen=True,
         imdb="", rating="", title=""
     ):
@@ -102,8 +102,8 @@ class MenuList():
         else:
             list_item.setProperty("IsPlayable", "false")
 
-        if datetime:
-            list_item.setInfo("video", {"dateadded": datetime})
+        if datetime_str:
+            list_item.setInfo("video", {"dateadded": datetime_str})
 
         if duration:
             list_item.setInfo("video", {"duration": duration})
@@ -116,6 +116,9 @@ class MenuList():
 
         if rating:
             list_item.setInfo("video", {"rating": rating})
+
+        if genre:
+            list_item.setInfo("video", {"genre": genre})
 
         if context_menu_items:
             list_item.addContextMenuItems(context_menu_items)
@@ -737,13 +740,12 @@ class MenuList():
                 receipt["endTime"], "ms", "%c"
             )
 
-            # Display super fancy invoice 
+            # Display super fancy invoice
             receipt_str = ""
-            for (key, val) in receipt.items():
-                receipt_str = receipt_str + "[COLOR blue]{0}[/COLOR]: {1}\n".format(
-                    key, val
-                )
-            header = self.addon_name = "{0} - {1}".format(
+            for (key, val) in list(receipt.items()):
+                receipt_str = receipt_str + \
+                    "[COLOR blue]{0}[/COLOR]: {1}\n".format(key, val)
+            header = "{0} - {1}".format(
                 self.addon.name, self.addon.localize(30106)
             )
             Dialog().textviewer(header, receipt_str)
@@ -907,7 +909,7 @@ class MenuList():
 
             try:
                 tz_sthlm_stamps = TimezoneStamps("Europe/Stockholm")
-                datetime = tz_sthlm_stamps.local_datetime_str(
+                datetime_str = tz_sthlm_stamps.local_datetime_str(
                     episode["availableFrom"]["timestamp"], "ms",
                     "%Y-%m-%d %H:%M:%S"
                 )
@@ -919,7 +921,7 @@ class MenuList():
                 )
                 time_label = tz_sthlm_stamps.strip_seconds(time_label)
             except Exception:
-                datetime = ""
+                datetime_str = ""
                 date_label = ""
                 time_label = ""
 
@@ -962,7 +964,7 @@ class MenuList():
 
             self._add_folder_item(
                 items, label, plugin_url, icon, fanart, info=description,
-                is_playable=True, is_folder=False, datetime=datetime,
+                is_playable=True, is_folder=False, datetime_str=datetime_str,
                 duration=duration, context_menu_items=context_menu
             )
 
@@ -1080,8 +1082,10 @@ class MenuList():
                         - program["startTime"]["timestamp"]) // 1000
 
             timestamp_now = tz_sthlm_stamps.now("ms")
-            is_live = (timestamp_now > program["startTime"]["timestamp"] and
-                       timestamp_now < program["endTime"]["timestamp"])
+            start_time = program["startTime"]["timestamp"]
+            end_time = program["endTime"]["timestamp"]
+            is_live = start_time <= timestamp_now <= end_time
+
             title = program["media"]["title"]
             label = "[COLOR yellow]{2}[/COLOR] [COLOR {0}]{1}[/COLOR]".format(
                 "blue" if is_live else "white", title, start_time
@@ -1154,5 +1158,5 @@ class MenuList():
 
         while xbmc.Player().isPlaying():
             xbmc.sleep(250)
-        else:
-            self.telia_play.delete_stream()
+
+        self.telia_play.delete_stream()
