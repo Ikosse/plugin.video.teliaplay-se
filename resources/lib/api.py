@@ -180,7 +180,7 @@ class TeliaPlay():
                     "extensions": {
                         "persistedQuery": {
                             "version": 1,
-                            "sha256Hash": "958b924205529891e53b7000269afbbc63d27c171fbb569baae9c3466a681e32"
+                            "sha256Hash": "d9b87773e70c63a54364a750fa171efbc72a882da51d9fe7f898d4b390e145e6"
                         }
                     }
                 }
