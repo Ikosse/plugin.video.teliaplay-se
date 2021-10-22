@@ -212,7 +212,7 @@ class TeliaPlay():
                     "extensions": {
                         "persistedQuery": {
                             "version": 1,
-                            "sha256Hash": "c8dc9ddc3c115e21b4e0ac9f9c5c11ad675a51ffeabd6a577fcd8e64ebcef84a"
+                            "sha256Hash": "a1ae97411ecf06242ecc471813b409c6343358f712893afd1a5f0eb3ac267ac3"
                         }
                     }
                 }
@@ -249,7 +249,7 @@ class TeliaPlay():
                     "extensions": {
                         "persistedQuery": {
                             "version": 1,
-                            "sha256Hash": "7e99f055ab4baeff853c1848482a4e0252be8b0a447fba1bff4afcf0ce29a49d"
+                            "sha256Hash": "c67f47ed145a5cd7700f403e60ac96b6213c71e9bfe4549b44685406b5b63c04"
                         }
                     }
                 }
@@ -284,7 +284,7 @@ class TeliaPlay():
                     "extensions": {
                         "persistedQuery": {
                             "version": 1,
-                            "sha256Hash": "b7b5417c08cd8bce181d47c2a563306207bd3219cea86866a6514722c1b838bc"
+                            "sha256Hash": "50d41fa13c31529baba7f796dafa99418f2448024ffe91953d7961fb4b8ea011"
                         }
                     }
                 }
@@ -317,7 +317,7 @@ class TeliaPlay():
                     "extensions": {
                         "persistedQuery": {
                             "version": 1,
-                            "sha256Hash": "c8dc9ddc3c115e21b4e0ac9f9c5c11ad675a51ffeabd6a577fcd8e64ebcef84a"
+                            "sha256Hash": "a1ae97411ecf06242ecc471813b409c6343358f712893afd1a5f0eb3ac267ac3"
                         }
                     }
                 }
@@ -345,12 +345,13 @@ class TeliaPlay():
                 "query": {
                     "operationName": "getStorePage",
                     "variables": {
-                        "id": store_id
+                        "id": store_id,
+                        "offset": 0
                     },
                     "extensions": {
                         "persistedQuery": {
                             "version": 1,
-                            "sha256Hash": "ee298e9cb2c92d788b6f50965a10eeba708c50b9a77e014faa4179709593ddc5"
+                            "sha256Hash": "22d434cd12ff38bb4ae5fd1940b797706216c0b7ca76c86110e8b07b2955c658"
                         }
                     }
                 }
@@ -391,7 +392,7 @@ class TeliaPlay():
                     "extensions": {
                         "persistedQuery": {
                             "version": 1,
-                            "sha256Hash": "c10de6b66a0635a0ffbeab07b723e42dcd919b1ed8cb3570bd1ba68aab2e05fe"
+                            "sha256Hash": "07ac910ce5dbad6dcd012598dc0b31b551dd2b1c6eaf8cb1972233fdef694249"
                         }
                     }
                 }
@@ -429,7 +430,7 @@ class TeliaPlay():
                     "extensions": {
                         "persistedQuery": {
                             "version": 1,
-                            "sha256Hash": "d32d31dc4bb4d192e3aca22f675a19a8d691454e84542624a8fdeb07052be011"
+                            "sha256Hash": "52ad822a64944086e32b3de24f0474cf9dd8a69326c6029d3d9cc1e5e95a392d"
                         }
                     }
                 }
@@ -465,7 +466,7 @@ class TeliaPlay():
                     "extensions": {
                         "persistedQuery": {
                             "version": 1,
-                            "sha256Hash": "9bb2423ff85037af6e1e6bad300c4805e78f7c0132f8193891c09d11e1479eb6"
+                            "sha256Hash": "fed3ca9ece5a7ddc4e0b0f4ab2fa0af261993aa7361730abb69431d2a43ce085"
                         }
                     }
                 }
