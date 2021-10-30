@@ -1,2 +1,5 @@
 1.0.1 [20210804]
 - Release
+
+1.0.2 [20211030]
+- Updated graphql hashes
