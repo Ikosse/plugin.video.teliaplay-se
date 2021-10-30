@@ -212,7 +212,7 @@ class TeliaPlay():
                     "extensions": {
                         "persistedQuery": {
                             "version": 1,
-                            "sha256Hash": "a1ae97411ecf06242ecc471813b409c6343358f712893afd1a5f0eb3ac267ac3"
+                            "sha256Hash": "4010f0c6c590330655506fabd5493ec94e6d1605d91d7cb9dcd4f9d2ce99126f"
                         }
                     }
                 }
@@ -223,7 +223,7 @@ class TeliaPlay():
             "User-Agent": "kodi.tv",
             "client-name": "web",
             "tv-client-boot-id": self.tv_client_boot_id,
-            "Authorization": "Bearer " + self.token_data["accessToken"],
+            "Authorization": "Bearer " + self.token_data["accessToken"]
         }
 
         response_json = self.web_utils.make_request(
@@ -249,7 +249,7 @@ class TeliaPlay():
                     "extensions": {
                         "persistedQuery": {
                             "version": 1,
-                            "sha256Hash": "c67f47ed145a5cd7700f403e60ac96b6213c71e9bfe4549b44685406b5b63c04"
+                            "sha256Hash": "3ac1076fee793bf1cbb19327d3baf6c89ae647a6664b9e8c3030635ebc6dd2c9"
                         }
                     }
                 }
@@ -284,7 +284,7 @@ class TeliaPlay():
                     "extensions": {
                         "persistedQuery": {
                             "version": 1,
-                            "sha256Hash": "50d41fa13c31529baba7f796dafa99418f2448024ffe91953d7961fb4b8ea011"
+                            "sha256Hash": "05f9356e33be31cb36938442b37776097b304241072bf1bc31af53f65dfaf417"
                         }
                     }
                 }
