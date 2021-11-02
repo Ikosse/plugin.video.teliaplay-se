@@ -662,7 +662,10 @@ class TeliaPlay():
         error_check(response_json)
 
         if stream_type == "live":
-            return response_json["streams"][1]
+            try:
+                return response_json["streams"][1]
+	    except IndexError:
+                return response_json["streams"][0]
         else:
             return response_json["streams"][0]
 
