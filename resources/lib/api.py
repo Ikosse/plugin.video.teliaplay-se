@@ -2,6 +2,7 @@ import platform
 import uuid
 from resources.lib.webutils import WebUtils
 
+CHANNEL_LIMIT = 100
 
 class TeliaException(Exception):
     pass
@@ -267,7 +268,7 @@ class TeliaPlay():
                     "operationName": "getTvChannels",
                     "variables": {
                         "timestamp": int(timestamp),
-                        "limit": 20,
+                        "limit": CHANNEL_LIMIT,  # quick and dirty fix for ow; will add pagination later
                         "programLimit": program_limit,
                         "offset": 0
                     },
