@@ -328,12 +328,6 @@ class TeliaPlay():
         error_check(response_json)
         return response_json["data"]["channel"]
 
-        response_json = self.web_utils.make_request(
-            request, headers=headers
-        ).json()
-        error_check(response_json)
-        return response_json["data"]["page"]["pagePanels"]["items"]
-
     def get_store(self, store_id):
         request = {
             "GET": {
