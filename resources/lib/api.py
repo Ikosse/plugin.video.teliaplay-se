@@ -662,12 +662,12 @@ class TeliaPlay():
         error_check(response_json)
 
         if stream_type == "live":
-			try:
-				return response_json["streams"][1]
-			except IndexError:
-				return response_json["streams"][0]
-			else:
-				return response_json["streams"][0]
+            try:
+                return response_json["streams"][1]
+            except IndexError:
+                return response_json["streams"][0]
+        else:
+            return response_json["streams"][0]
 
     def delete_stream(self):
         request = {
