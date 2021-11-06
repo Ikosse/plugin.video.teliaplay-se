@@ -438,7 +438,7 @@ class MenuList():
                 icon = None
 
             if not panel["title"]:
-                panel["title"] = self.addon.localize(j0011)
+                panel["title"] = self.addon.localize(30011)
 
             plugin_url = self.addon.plugin_url({
                 "menu": "storePanel",
