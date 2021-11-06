@@ -8,4 +8,4 @@
 
 1.1.2 [20211106]
 - Added paginator for channels menu
-- Added setting for controling the number of channels and movies per page
+- Added settings for controling the number of channels and movies per page
