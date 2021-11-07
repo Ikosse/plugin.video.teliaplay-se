@@ -595,8 +595,8 @@ class MenuList():
         else:
             # Reuse panel menu for search menu; no need to reinvent the wheel.
             query = self.search_history.get(panel_id)
-            # The search doesn't work if the number of results is too large.
-            result_per_page = 50
+            # Searching won't work if the number of results per page is too large.
+            results_per_page = 50
             offset = page*results_per_page
             panel = self.telia_play.search(query, results_per_page, offset)
 
