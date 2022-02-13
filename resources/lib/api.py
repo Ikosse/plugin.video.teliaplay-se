@@ -1,5 +1,7 @@
 import platform
 import uuid
+import json
+from resources.lib.kodiutils import AddonUtils
 from resources.lib.webutils import WebUtils
 
 
@@ -25,30 +27,9 @@ def error_check(response_json):
 
 class TeliaPlay():
 
-    graphql_hashes = {
-	"getMainMenu":
-        "f9c1eb6c91def27ee800da2296922d3798a54a8af32f79f25661afb621f1b45d",
-	"search":
-        "de385aa8e38e6d7c1e308a740bdb152b9d6d89c620e758a16814ad9bd0ae85e0",
-	"getPage":
-        "4f9d11526144a07568d64d659c008bb28085e116c84c1dd0cd5ed7ea8db44a77",
-	"getTvChannels":
-        "332c536e6095632e61dd88f63a73b2c7f783c24ef4a8b21bcefbeae638de7aa2",
-	"getTvChannel":
-        "de9b6b8f45d8698cf5f6572d56ed387aa564a32ba8c617349221505c8222f77f",
-	"getStorePage":
-        "f02456e757d511c7d4abd02d64c9b7ab82e04d5203dca691f91112d54790d9db",
-	"getPanel":
-        "bbf3465986a62517cd9d33e237901c6f2fcb5b3983847800a9265e9378c19f00",
-	"getSeries":
-        "672502c85fe4c4d5ebd2db79e8b4cc46e3d83844f1c67e75226d8bc91300250d",
-	"getSeason":
-        "09bda1dc98eb6bc40d947de0ef48f76ff515687838ac1b4bda805d8fc4be2664",
-	"addToMyList":
-        "70a1b84e1976a3b9773b25b9096e4e6c39128218720b5a6d2ccc0a0dd522919b",
-	"removeFromMyList":
-        "f1b3ae838fa9b39cc8c1994ff03039aaa09b494673bcaa3f49c04a17a5fa92a1"
-    }
+    addon_utils = AddonUtils()
+    with open(addon_utils.hash_file) as file:
+        graphql_hashes = json.load(file)
 
     def __init__(self, userdata):
         self.tv_client_boot_id = userdata["bootUUID"]
