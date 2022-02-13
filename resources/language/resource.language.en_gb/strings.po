@@ -213,3 +213,11 @@ msgstr ""
 msgctxt "#32024"
 msgid "Add-on settings"
 msgstr ""
+
+msgctxt "#32025"
+msgid "Update graphql hashes"
+msgstr ""
+
+msgctxt "#32026"
+msgid "Updating graphql hashes is done in order to resolve the error: persisted query not found."
+msgstr ""

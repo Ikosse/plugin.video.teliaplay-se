@@ -214,3 +214,11 @@ msgstr "Justera antalet filmer som visas på varje sida."
 msgctxt "#32024"
 msgid "Add-on settings"
 msgstr "Tilläggsinställningar"
+
+msgctxt "#32025"
+msgid "Update graphql hashes"
+msgstr "Uppdatera graphql hashvärden."
+
+msgctxt "#32026"
+msgid "Updating graphql hashes is done in order to resolve the error: persisted query not found."
+msgstr "Updatering av graphql hashvärden är till för att avhjälpa felet: persisted query not found."

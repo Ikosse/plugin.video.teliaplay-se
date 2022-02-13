@@ -14,3 +14,7 @@
 1.2.2 [20211230]
 - Updated graphql hashes
 - Fixed broken menu entries
+
+1.2.3 [20220213]
+- Updated graphql hashes
+- Added settings menu for manually downloading graphql hashes from github repository

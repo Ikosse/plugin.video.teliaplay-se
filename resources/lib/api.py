@@ -27,11 +27,11 @@ def error_check(response_json):
 
 class TeliaPlay():
 
-    addon_utils = AddonUtils()
-    with open(addon_utils.hash_file) as file:
-        graphql_hashes = json.load(file)
-
     def __init__(self, userdata):
+        addon_utils = AddonUtils()
+        with open(addon_utils.graphql_hash_file) as file:
+            self.graphql_hashes = json.load(file)
+
         self.tv_client_boot_id = userdata["bootUUID"]
         self.device_id = userdata["deviceUUID"]
         self.session_id = str(uuid.uuid4())
