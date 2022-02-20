@@ -102,26 +102,12 @@ class Router():
             self.menu_list.play_stores_menu()
 
 
-def update_hashes():
-    hash_url = "https://raw.githubusercontent.com/Ikosse/plugin.video.teliaplay-se/master/resources/lib/graphql_hashes.json"
-    response = requests.get(hash_url)
-
-    if response.status_code == 200:
-        with open(AddonUtils().graphql_hash_file, "w") as file:
-            json.dump(response.json(), file, indent=4)
-
-    AddonUtils().addon.openSettings()
-
-
 def run():
     paramstring = sys.argv[2][1:]
     params = dict(parse_qsl(paramstring))
 
-    if "action" in params and params["action"] == "updateHashes":
-        update_hashes()
-    else:
-        try:
-            router = Router(params)
-            router.main_menu()
-        except TeliaException as te:
-            Dialog().textviewer(AddonUtils().name, str(te))
+    try:
+        router = Router(params)
+        router.main_menu()
+    except TeliaException as te:
+        Dialog().textviewer(AddonUtils().name, str(te))

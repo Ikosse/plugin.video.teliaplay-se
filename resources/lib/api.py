@@ -25,12 +25,11 @@ def error_check(response_json):
         raise TeliaException(response_json["message"])
 
 
+
 class TeliaPlay():
 
     def __init__(self, userdata):
         addon_utils = AddonUtils()
-        with open(addon_utils.graphql_hash_file) as file:
-            self.graphql_hashes = json.load(file)
 
         self.tv_client_boot_id = userdata["bootUUID"]
         self.device_id = userdata["deviceUUID"]
@@ -40,6 +39,25 @@ class TeliaPlay():
         except KeyError:
             self.token_data = None
         self.web_utils = WebUtils()
+
+    @property
+    def graphql_hashes(self):
+        request = {
+            "GET": {
+                "scheme": "https",
+                "host": "raw.githubusercontent.com",
+                "filename": "/Ikosse/teliaplay-graphql-hashes/master/graphql_hashes.json"
+            }
+        }
+
+        headers = {
+            "User-Agent": "kodi.tv",
+        }
+        response_json = self.web_utils.make_request(
+            request, headers=headers
+        ).json()
+        error_check(response_json)
+        return response_json
 
     def login(self, username, password):
         request = {
