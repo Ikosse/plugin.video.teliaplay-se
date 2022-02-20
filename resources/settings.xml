@@ -27,13 +27,6 @@
 						<popup>false</popup>
 					</control>
 				</setting>	
-				<setting id="updateHashes" type="action" label="32025" help="32026">
-					<level>0</level>
-					<data>RunAddon(plugin.video.teliaplay-se, action=updateHashes)</data>
-					<control type="button" format="action">
-						<close>true</close>
-					</control>
-				</setting>
 			</group>
 			<group id="2" label="32001">
 				<setting id="debug" type="boolean" label="32002" help="32003">
