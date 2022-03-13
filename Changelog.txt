@@ -15,6 +15,5 @@
 - Updated graphql hashes
 - Fixed broken menu entries
 
-1.2.3 [20220213]
-- Updated graphql hashes
-- Added settings menu for manually downloading graphql hashes from github repository
+1.2.3 [20220313]
+- Automatically retrieves graphql hashes from the dedicated github repository: https://github.com/Ikosse/teliaplay-graphql-hashes
