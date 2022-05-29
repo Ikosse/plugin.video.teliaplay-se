@@ -25,7 +25,6 @@ def error_check(response_json):
         raise TeliaException(response_json["message"])
 
 
-
 class TeliaPlay():
 
     def __init__(self, userdata):
@@ -179,6 +178,7 @@ class TeliaPlay():
             "client-name": "web",
             "tv-client-boot-id": self.tv_client_boot_id,
             "Authorization": "Bearer " + self.token_data["accessToken"],
+            "x-country": "SE"
         }
 
         response_json = self.web_utils.make_request(
@@ -215,6 +215,7 @@ class TeliaPlay():
             "client-name": "web",
             "tv-client-boot-id": self.tv_client_boot_id,
             "Authorization": "Bearer " + self.token_data["accessToken"],
+            "x-country": "SE"
         }
         response_json = self.web_utils.make_request(
             request, headers=headers
@@ -247,7 +248,8 @@ class TeliaPlay():
             "User-Agent": "kodi.tv",
             "client-name": "web",
             "tv-client-boot-id": self.tv_client_boot_id,
-            "Authorization": "Bearer " + self.token_data["accessToken"]
+            "Authorization": "Bearer " + self.token_data["accessToken"],
+            "x-country": "SE"
         }
 
         response_json = self.web_utils.make_request(
@@ -284,6 +286,7 @@ class TeliaPlay():
             "client-name": "web",
             "tv-client-boot-id": self.tv_client_boot_id,
             "Authorization": "Bearer " + self.token_data["accessToken"],
+            "x-country": "SE"
         }
 
         response_json = self.web_utils.make_request(
@@ -319,6 +322,7 @@ class TeliaPlay():
             "client-name": "web",
             "tv-client-boot-id": self.tv_client_boot_id,
             "Authorization": "Bearer " + self.token_data["accessToken"],
+            "x-country": "SE"
         }
 
         response_json = self.web_utils.make_request(
@@ -353,6 +357,7 @@ class TeliaPlay():
             "client-name": "web",
             "tv-client-boot-id": self.tv_client_boot_id,
             "Authorization": "Bearer " + self.token_data["accessToken"],
+            "x-country": "SE"
         }
 
         response_json = self.web_utils.make_request(
@@ -395,6 +400,7 @@ class TeliaPlay():
             "client-name": "web",
             "tv-client-boot-id": self.tv_client_boot_id,
             "Authorization": "Bearer " + self.token_data["accessToken"],
+            "x-country": "SE"
         }
 
         response_json = self.web_utils.make_request(
@@ -429,6 +435,7 @@ class TeliaPlay():
             "client-name": "web",
             "tv-client-boot-id": self.tv_client_boot_id,
             "Authorization": "Bearer " + self.token_data["accessToken"],
+            "x-country": "SE"
         }
         response_json = self.web_utils.make_request(
             request, headers=headers
@@ -465,6 +472,7 @@ class TeliaPlay():
             "client-name": "web",
             "tv-client-boot-id": self.tv_client_boot_id,
             "Authorization": "Bearer " + self.token_data["accessToken"],
+            "x-country": "SE"
         }
 
         response_json = self.web_utils.make_request(
