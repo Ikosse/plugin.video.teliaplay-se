@@ -21,3 +21,4 @@
 1.2.4 [20220617]
 - Fixed menu entries returning 400 error
 - Fixed widevine license url returning 500 error
+- Updated graphql hashes
