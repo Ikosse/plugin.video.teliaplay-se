@@ -199,7 +199,8 @@ class TeliaPlay():
                         "q": query,
                         "limit": limit,
                         "offset": offset,
-                        "searchRentalsType": "ALL"
+                        "searchRentalsType": "ALL",
+                        "searchSubscriptionType": "IN_SUBSCRIPTION"
                     },
                     "extensions": {
                         "persistedQuery": {
@@ -210,6 +211,7 @@ class TeliaPlay():
                 }
             }
         }
+        
         headers = {
             "User-Agent": "kodi.tv",
             "client-name": "web",
@@ -217,6 +219,7 @@ class TeliaPlay():
             "Authorization": "Bearer " + self.token_data["accessToken"],
             "x-country": "SE"
         }
+        
         response_json = self.web_utils.make_request(
             request, headers=headers
         ).json()
