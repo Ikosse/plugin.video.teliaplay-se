@@ -41,22 +41,19 @@ class TeliaPlay():
 
     @property
     def graphql_hashes(self):
-        request = {
-            "GET": {
-                "scheme": "https",
-                "host": "raw.githubusercontent.com",
-                "filename": "/Ikosse/teliaplay-graphql-hashes/master/graphql_hashes.json"
-            }
+       return {
+            "getMainMenu":      "f9c1eb6c91def27ee800da2296922d3798a54a8af32f79f25661afb621f1b45d",
+            "search":           "dc9d71dbf7da4f5e5854d9e58e33274379581e07c353f8868cf0d7988c1330de",
+            "getPage":          "9bb1e827055ad3fa20a0a3bf652605f851dcdd34401ae24a3aea4b7b5ae257c4",
+            "getTvChannels":    "a16edac021bc6892ce4a17560cd364c716e1dd086fc4bd2a11e0b031577b3af7",
+            "getTvChannel":     "9af1a674ce9482ca4d89b1bb623a5b69b725cf3c9c6565a93a6c7b04f443891b",
+            "getStorePage":     "e2297df5af0241be95800fbb6758b502808cd00de3e10fdaed865e308e499f4e",
+            "getPanel":         "299f78202946997a0e56f9c4fa4360300f7404fdbe3fe77580bb3003843568b1",
+            "getSeries":        "4bbb65b9bf621902b3f3dc30ae036ff36d9fa57f024f6e3bd10cb55c57f0033d",
+            "getSeason":        "0772731aec9d8b4aecddb3d2dfd1743b32b1db8b0f6d8a03f37bf7ce6c032688",
+            "addToMyList":      "a8369da660da6f45e0eabd53756effcd4c40668f1794a853c298c29e7903c7f9",
+            "removeFromMyList": "630c2f99d817682d4f15d41084cdc2f40dc158a5dae0bd2ab0e815ce268da277"
         }
-
-        headers = {
-            "User-Agent": "kodi.tv",
-        }
-        response_json = self.web_utils.make_request(
-            request, headers=headers
-        ).json()
-        error_check(response_json)
-        return response_json
 
     def login(self, username, password):
         request = {
