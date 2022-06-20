@@ -23,3 +23,4 @@
 - Fixed widevine license url returning 500 error
 - Updated graphql hashes
 - Fixed search menu
+- Fixed store panels
