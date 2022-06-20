@@ -341,7 +341,7 @@ class TeliaPlay():
                     "operationName": "getStorePage",
                     "variables": {
                         "id": store_id,
-                        "offset": 0
+                        "pagePanelsOffset": 0
                     },
                     "extensions": {
                         "persistedQuery": {
