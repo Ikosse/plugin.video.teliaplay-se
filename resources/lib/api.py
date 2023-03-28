@@ -38,7 +38,7 @@ class TeliaPlay():
        return {
             "getMainMenu":      "90954cfc4db13a9e1112c7d22542a9b9889aa01afe9b28092a4a0b11e6e614ec",
             "search2":           "8c668c4d671def803083c4753cf85f883aa91459d81b0aae6c7f5b400dc59779",
-            "getPage":          "02f45db97d1f8357a891550d1f6fef4bc69dbe68c824ede0982503bca8366eb",
+            "getPage":          "102f45db97d1f8357a891550d1f6fef4bc69dbe68c824ede0982503bca8366eb",
             "getTvChannels":    "9784591ec506847d70e0bcdc122c5e7dc6bc9df1c0a0afd1b5230d22b7707a20",
             "getTvChannel":     "123d20ce7c116b2c2f9df9ae4c07af021bb8c6b610476fa505d3c5a889ba97ef",
             "getStorePage":     "2ad5fafd846ce292b22cb126fd03ce5404643cf8c88370ab7837b9dc69e2b2f7",
