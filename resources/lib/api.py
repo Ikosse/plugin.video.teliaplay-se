@@ -37,14 +37,14 @@ class TeliaPlay():
     def graphql_hashes(self):
        return {
             "getMainMenu":      "90954cfc4db13a9e1112c7d22542a9b9889aa01afe9b28092a4a0b11e6e614ec",
-            "search":           "9175cf6ce6cef9eab9d8025f0ec1ff93aa62b798385aafa097e684bdddfe06ce",
-            "getPage":          "5e746d24bfd3ce1e178ac3d70fa40988242e1cbb41a0996feb14c67a6877bb41",
+            "search2":          "8c668c4d671def803083c4753cf85f883aa91459d81b0aae6c7f5b400dc59779",
+            "getPage":          "102f45db97d1f8357a891550d1f6fef4bc69dbe68c824ede0982503bca8366eb",
             "getTvChannels":    "eac2953c16d1077ef980b003c21b779d18b0d9b912c2cdb2a797be5d14865bba",
             "getTvChannel":     "dc6745d8e00726941f6bef40de7fcb28335027cbd404fe0fe16bd933359d3012",
             "getStorePage":     "2ad5fafd846ce292b22cb126fd03ce5404643cf8c88370ab7837b9dc69e2b2f7",
-            "getPanel":         "c9ef8a552c7f53000201e199e08a4c14396d56312c65687e4f523c100fc51804",
-            "getCdpSeries":     "bf07e6522b43c5fe892e60c998fff871493b6f0d3ca79d6eed011efc9ab8a9a2",
-            "getCdpSeason":     "80d43b806cd2d60973bca1419e17ad80c5cd4331777e84db82af6dac2a4a861b",
+            "getPanel":         "0bd6167e23406bf60133b46073c35355865c1e041f29072c8034680067799521",
+            "getCdpSeries":     "78f6a38c394d44e5a5714c4f304033b5c9b2ac63553c98fb7f54e3b91fea9e0f",
+            "getCdpSeason":     "7e3df0d08104a71352f30031abf2e895360c67064edd3311f2bc27deaf889863",
             "addToMyList":      "a8369da660da6f45e0eabd53756effcd4c40668f1794a853c298c29e7903c7f9",
             "removeFromMyList": "630c2f99d817682d4f15d41084cdc2f40dc158a5dae0bd2ab0e815ce268da277"
         }
@@ -185,7 +185,7 @@ class TeliaPlay():
                 "host": "graphql-telia.t6a.net",
                 "filename": "/graphql",
                 "query": {
-                    "operationName": "search",
+                    "operationName": "search2",
                     "variables": {
                         "q": query,
                         "limit": limit,
@@ -196,7 +196,7 @@ class TeliaPlay():
                     "extensions": {
                         "persistedQuery": {
                             "version": 1,
-                            "sha256Hash": self.graphql_hashes["search"]
+                            "sha256Hash": self.graphql_hashes["search2"]
                         }
                     }
                 }
@@ -454,7 +454,7 @@ class TeliaPlay():
                     "extensions": {
                         "persistedQuery": {
                             "version": 1,
-                            "sha256Hash": self.graphql_hashes["getSeason"]
+                            "sha256Hash": self.graphql_hashes["getCdpSeason"]
                         }
                     }
                 }
