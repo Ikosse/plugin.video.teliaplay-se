@@ -37,10 +37,10 @@ class TeliaPlay():
     def graphql_hashes(self):
        return {
             "getMainMenu":      "90954cfc4db13a9e1112c7d22542a9b9889aa01afe9b28092a4a0b11e6e614ec",
-            "search2":           "8c668c4d671def803083c4753cf85f883aa91459d81b0aae6c7f5b400dc59779",
+            "search2":          "8c668c4d671def803083c4753cf85f883aa91459d81b0aae6c7f5b400dc59779",
             "getPage":          "102f45db97d1f8357a891550d1f6fef4bc69dbe68c824ede0982503bca8366eb",
-            "getTvChannels":    "9784591ec506847d70e0bcdc122c5e7dc6bc9df1c0a0afd1b5230d22b7707a20",
-            "getTvChannel":     "123d20ce7c116b2c2f9df9ae4c07af021bb8c6b610476fa505d3c5a889ba97ef",
+            "getTvChannels":    "eac2953c16d1077ef980b003c21b779d18b0d9b912c2cdb2a797be5d14865bba",
+            "getTvChannel":     "dc6745d8e00726941f6bef40de7fcb28335027cbd404fe0fe16bd933359d3012",
             "getStorePage":     "2ad5fafd846ce292b22cb126fd03ce5404643cf8c88370ab7837b9dc69e2b2f7",
             "getPanel":         "0bd6167e23406bf60133b46073c35355865c1e041f29072c8034680067799521",
             "getCdpSeries":     "78f6a38c394d44e5a5714c4f304033b5c9b2ac63553c98fb7f54e3b91fea9e0f",
